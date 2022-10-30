@@ -1,0 +1,7 @@
+name: Swapcore
+version: '${project.version}'
+main: com.github.kilobytz.swapcore.Swapcore
+authors: [ Kilobytes ]
+description: Swapcore for RR
+commands:
+  swap:
