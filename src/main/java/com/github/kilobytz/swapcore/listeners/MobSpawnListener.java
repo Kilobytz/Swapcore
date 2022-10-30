@@ -33,63 +33,14 @@ public class MobSpawnListener implements Listener {
             case CREEPER: {
                 if (chance > 50) {
                     e.setCancelled(true);
-                    //SwapCreeper.spawn(loc)
+                    //SwapCreeper.spawn(loc);
                 }
                 break;
             }
             case ENDERMAN: {
                 if (chance > 50) {
                     e.setCancelled(true);
-                    //SwapEnderman.spawn(loc)
-                }
-                break;
-            }
-            case PIG_ZOMBIE: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapPigZombie.spawn(loc)
-                }
-                break;
-            }
-            case GHAST: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapGhast.spawn(loc)
-                }
-                break;
-            }
-            case WITHER_SKELETON: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapWitherSkeleton.spawn(loc)
-                }
-                break;
-            }
-            case BLAZE: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapBlaze.spawn(loc)
-                }
-                break;
-            }
-            case WITCH: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapWitch.spawn(loc)
-                }
-                break;
-            }
-            case WITHER: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapWither.spawn(loc)
-                }
-                break;
-            }
-            case ENDER_DRAGON: {
-                if (chance > 50) {
-                    e.setCancelled(true);
-                    //SwapEnderDragon.spawn(loc)
+                    //SwapEnderman.spawn(loc);
                 }
                 break;
             }

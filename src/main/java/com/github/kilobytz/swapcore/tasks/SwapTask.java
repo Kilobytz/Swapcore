@@ -19,14 +19,14 @@ public class SwapTask extends BukkitRunnable {
     }
 
     public void run() {
-        if (Bukkit.getOnlinePlayers().size() < 2) {
-            Bukkit.broadcastMessage(ChatColor.RED + "Error. Not enough players online.");
-            return;
-        }
         for (UUID id : list) {
             if (Bukkit.getPlayer(id) == null)
                 offline.add(list.indexOf(id));
             continue;
+        }
+        if (Bukkit.getOnlinePlayers().size() < 2 || list.size()-offline.size() < 2) {
+            Bukkit.getLogger().info(ChatColor.RED + "Error. Not enough players online.");
+            return;
         }
         int rand1 = (int) (Math.random() * list.size());
         int rand2 = (int) (Math.random() * list.size());
