@@ -1,5 +1,7 @@
 package com.github.kilobytz.swapcore.listeners;
 
+import com.github.kilobytz.swapcore.mobs.SwapSkeleton;
+import com.github.kilobytz.swapcore.mobs.SwapZombie;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,16 +17,16 @@ public class MobSpawnListener implements Listener {
 
         switch (e.getEntityType()) {
             case ZOMBIE: {
-                if (chance > 50) {
+                if (chance < 50) {
                     e.setCancelled(true);
-                    //SwapZombie.spawn(loc)
+                    SwapZombie.spawn(loc);
                 }
                 break;
             }
             case SKELETON: {
-                if (chance > 50) {
+                if (chance < 66) {
                     e.setCancelled(true);
-                    //SwapSkeleton.spawn(loc)
+                    SwapSkeleton.spawn(loc);
                 }
                 break;
             }
