@@ -2,8 +2,11 @@ package com.github.kilobytz.swapcore.framework;
 
 import com.github.kilobytz.swapcore.Swapcore;
 import com.github.kilobytz.swapcore.tasks.SwapTask;
+import net.minecraft.server.v1_12_R1.EntityLiving;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -47,6 +50,17 @@ public class Game {
 
     public void removePlayer(Player p) {
         players.remove(p.getUniqueId());
+    }
+
+    public void swapPlayerWithRandomPlayer(Player p){
+        Bukkit.broadcastMessage(p.getName() + " should be swapping with random player");
+    }
+
+    public void swapPlayerWithMob(Player p, LivingEntity e){
+        Location pLoc = p.getLocation();
+        Location eLoc = e.getLocation();
+        p.teleport(eLoc);
+        e.teleport(pLoc);
     }
 
 
